@@ -43,8 +43,13 @@ public class ElevatorApplication {
 
 //		example para public elevator(???
         ExternalRequest er3 = new ExternalRequest(Direction.UP, 0);
-        InternalRequest ir3 = new InternalRequest(2, 600);
+        InternalRequest ir3 = new InternalRequest(-2, 100);
         Request request3 = new Request(ir3, er3);
+
+        //		example para public elevator(???
+        ExternalRequest er4 = new ExternalRequest(Direction.UP, 0);
+        InternalRequest ir4 = new InternalRequest(51, 100);
+        Request request4 = new Request(ir4, er4);
 
 //		add request to the elevator
         System.out.println("before thread add request elevator start");
@@ -53,6 +58,8 @@ public class ElevatorApplication {
         new Thread(new AddRequestElevator(publicElevator, request3)).start();
         Thread.sleep(3000);
         new Thread(new AddRequestElevator(publicElevator, request2)).start();
+        Thread.sleep(3000);
+        new Thread(new AddRequestElevator(publicElevator, request4)).start();
         Thread.sleep(3000);
 
 

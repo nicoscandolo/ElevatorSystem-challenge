@@ -1,7 +1,12 @@
 # ElevatorSystem-challenge
 Challenge for company interview - Elevator System
 
-Run command from terminal
+Execute command from terminal to run Application
 ````
-mvn spring-boot:run -Dspring-boot.run.profiles=local
+mvn spring-boot:run
 ````
+Execute command from terminal to run Tests
+```
+mvn clean test
+```
+

@@ -1,9 +1,11 @@
 package com.kinda.elevator.entities;
 
 import com.kinda.elevator.interfaces.ElevatorInterface;
+import lombok.Getter;
 
 import java.util.TreeSet;
 
+@Getter
 public abstract class Elevator implements ElevatorInterface {
     protected int currentFloor = 0;
     protected Direction currentDirection = Direction.UP;
